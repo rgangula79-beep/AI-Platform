@@ -5,7 +5,7 @@ import { signToken } from "../utils/jwt.js";
 
 export async function registerController(req,res) {
   try { return ok(res, await register(req.body), 201); }
-  catch(e) { return fail(res,e.message,400); }
+  catch(e) { const status = e.message.includes('already registered') ? 409 : 400; return fail(res,e.message,status); }
 }
 
 export async function loginController(req,res) {
