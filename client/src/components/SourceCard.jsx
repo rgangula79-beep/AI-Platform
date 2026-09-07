@@ -1,0 +1,1 @@
+export default function SourceCard({item}){return <a className="sourcecard" href={item.url} target="_blank" rel="noreferrer"><strong>{item.title}</strong><p>{item.content}</p><small>{item.url}</small></a>}

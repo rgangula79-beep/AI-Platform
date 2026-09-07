@@ -1,0 +1,2 @@
+import {useEffect,useState} from "react";import {Link} from "react-router-dom";import api from "../services/api";
+export default function History(){const[data,setData]=useState([]);useEffect(()=>{api.get("/user/history").then(r=>setData(r.data.conversations||[]))},[]);return <div className="page"><h1>History</h1><div className="list">{data.map(x=><Link to="/chat" key={x.id} className="listitem"><strong>{x.title}</strong><small>{new Date(x.updated_at).toLocaleString()}</small></Link>)}{!data.length&&<p>No conversations yet.</p>}</div></div>}

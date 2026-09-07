@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: ai-platform-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ai_platform
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - ai_platform_pg:/var/lib/postgresql/data
+
+volumes:
+  ai_platform_pg:

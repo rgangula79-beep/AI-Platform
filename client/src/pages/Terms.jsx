@@ -1,0 +1,1 @@
+export default function Terms(){return <div className="legal"><h1>Terms</h1><p>Use this development terms page as a placeholder. Publish final terms, refund policy and acceptable-use policy before taking live payments.</p></div>}

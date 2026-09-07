@@ -1,0 +1,11 @@
+import { Router } from "express";
+import { authMiddleware } from "../middleware/authMiddleware.js";
+import { adminMiddleware } from "../middleware/adminMiddleware.js";
+import { dashboard,users,usage,owner } from "../controllers/adminController.js";
+const router=Router();
+router.use(authMiddleware,adminMiddleware);
+router.get("/dashboard",dashboard);
+router.get("/users",users);
+router.get("/usage",usage);
+router.get("/owner",owner);
+export default router;

@@ -1,0 +1,1 @@
+export default function Privacy(){return <div className="legal"><h1>Privacy</h1><p>This application should collect only the information required to provide accounts, AI features, search, files, payments and security. Configure your final production privacy policy before launch.</p></div>}

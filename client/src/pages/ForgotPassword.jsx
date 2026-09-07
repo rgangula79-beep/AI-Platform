@@ -1,0 +1,1 @@
+export default function ForgotPassword(){return <div className="center"><div className="card narrow"><h1>Password reset</h1><p>For production, connect this page to an email-token reset flow. SMTP configuration is already prepared on the server.</p></div></div>}
